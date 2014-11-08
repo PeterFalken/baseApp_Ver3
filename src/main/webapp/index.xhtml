@@ -2,20 +2,32 @@
 <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      ng-app="baseApp">
 <head>
     <title>Base3</title>
-    <!--script type="javascript" src=""/-->
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"/>
+    <script type="application/javascript" src="resources/js/ngApp_base.js"/>
 </head>
-<body>
-<fieldset>
+<body ng-controller="LoginController as loginCtrl">
+<fieldset ng-show="!loginCtrl.user.loggedIn">
     <legend>Login</legend>
     <form action="index.xhtml">
-        <!--input/>
-        <input/-->
-
+        <label>username: {{loginCtrl.user.username}}</label>
+        <br/>
+        <label>password: {{loginCtrl.user.password}}</label>
+        <br/>
+        <button>Login</button>
     </form>
+</fieldset>
 
+<fieldset ng-show="loginCtrl.user.loggedIn">
+    <legend>Application</legend>
+    <form action="index.xhtml">
+        <label>Do username: {{loginCtrl.user.username}}</label>
+        <label>Do password: {{loginCtrl.user.password}}</label>
+        <button>Activate</button>
+    </form>
 </fieldset>
 </body>
 </html>
