@@ -6,20 +6,33 @@
       ng-app="baseApp">
 <head>
     <title>Base3</title>
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="resources/css/base.css"/>
+
+    <!-- AngularJS files -->
     <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"/>
     <script type="application/javascript" src="resources/js/ngApp_base.js"/>
 </head>
+
 <body ng-controller="LoginController as loginCtrl">
-<fieldset ng-show="!loginCtrl.user.loggedIn">
-    <legend>Login</legend>
-    <form action="index.xhtml">
-        <label>username: {{loginCtrl.user.username}}</label>
-        <br/>
-        <label>password: {{loginCtrl.user.password}}</label>
-        <br/>
-        <button>Login</button>
-    </form>
-</fieldset>
+
+<!-- HEADER Section: START -->
+<div ng-show="loginCtrl.user.loggedIn">Header - Use JQuery + BootStrap</div>
+<!-- HEADER Section: END -->
+
+<div class="centered" style="width: 300px">
+    <fieldset ng-show="!loginCtrl.user.loggedIn">
+        <legend>Login</legend>
+        <form action="index.xhtml">
+            <label>username: {{loginCtrl.user.username}}</label>
+            <br/>
+            <label>password: {{loginCtrl.user.password}}</label>
+            <br/>
+            <button>Login</button>
+        </form>
+    </fieldset>
+</div>
+
 
 <fieldset ng-show="loginCtrl.user.loggedIn">
     <legend>Application</legend>
@@ -29,5 +42,11 @@
         <button>Activate</button>
     </form>
 </fieldset>
+
+
+<!-- FOOTER Section: START -->
+<div>Footer - Use JQuery + BootStrap</div>
+<!-- FOOTER Section: END -->
+
 </body>
 </html>

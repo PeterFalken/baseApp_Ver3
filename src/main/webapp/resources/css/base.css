@@ -1,0 +1,22 @@
+body {
+    font-family: "Lucida Sans Unicode", Verdana, Arial, sans-serif;
+    font-size: 12px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.centered {
+    /*display: block;*/
+    margin: 0px auto;
+}
+
+.centered_text {
+    /* 	display: block; */
+    margin: 0px auto;
+    text-align: center;
+}
