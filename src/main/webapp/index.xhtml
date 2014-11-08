@@ -7,7 +7,8 @@
 <head>
     <title>Base3</title>
     <!-- StyleSheets -->
-    <link rel="stylesheet" href="resources/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/base.css"/>
 
     <!-- AngularJS files -->
     <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"/>
@@ -28,7 +29,12 @@
             <br/>
             <label>password: {{loginCtrl.user.password}}</label>
             <br/>
-            <button>Login</button>
+
+            <div class="centered_text">
+                <hr />
+                <button>Login</button>
+            </div>
+
         </form>
     </fieldset>
 </div>
