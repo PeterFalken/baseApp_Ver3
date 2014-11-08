@@ -1,7 +1,7 @@
 body {
     font-family: "Lucida Sans Unicode", Verdana, Arial, sans-serif;
     font-size: 12px;
-    margin: 0px auto;
+    margin: 0px 20px auto;
     padding: 10px;
 }
 
@@ -19,4 +19,15 @@ p {
     /* 	display: block; */
     margin: 0px auto;
     text-align: center;
+}
+
+/* Using example from: http://getbootstrap.com/examples/sticky-footer/ */
+.footer {
+    position: absolute;
+    bottom: 0;
+    /*width: 100%;*/
+    /* Set the fixed height of the footer here */
+    height: 20px;
+    line-height: 20px;
+    background-color: #f5f5f5;
 }

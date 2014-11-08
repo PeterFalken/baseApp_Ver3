@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
-      ng-app="baseApp">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="baseApp">
 <head>
     <title>Base3</title>
     <!-- StyleSheets -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="resources/css/base.css"/>
 
     <!-- AngularJS files -->
@@ -21,6 +19,7 @@
 <div ng-show="loginCtrl.user.loggedIn">Header - Use JQuery + BootStrap</div>
 <!-- HEADER Section: END -->
 
+<!-- Login FORM -->
 <div class="centered" style="width: 300px">
     <fieldset ng-show="!loginCtrl.user.loggedIn">
         <legend>Login</legend>
@@ -31,15 +30,15 @@
             <br/>
 
             <div class="centered_text">
-                <hr />
+                <hr/>
                 <button>Login</button>
             </div>
-
         </form>
     </fieldset>
 </div>
 
-
+<!-- Work AREA -->
+<div class="centered" style="width: 800px">
 <fieldset ng-show="loginCtrl.user.loggedIn">
     <legend>Application</legend>
     <form action="index.xhtml">
@@ -48,10 +47,14 @@
         <button>Activate</button>
     </form>
 </fieldset>
-
+</div>
 
 <!-- FOOTER Section: START -->
-<div>Footer - Use JQuery + BootStrap</div>
+<div class="footer centered_text">
+    <div class="container">
+        <p>Bitamins - 2014</p>
+    </div>
+</div>
 <!-- FOOTER Section: END -->
 
 </body>
