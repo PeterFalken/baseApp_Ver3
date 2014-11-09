@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
         "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="baseApp">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:form="http://www.springframework.org/tags/form" ng-app="baseApp">
 <head>
     <title>Base3</title>
     <!-- StyleSheets -->
@@ -20,7 +20,7 @@
 <!-- HEADER Section: END -->
 
 <!-- Login FORM -->
-<div class="centered" style="width: 300px">
+<div class="centered login">
     <fieldset ng-show="!loginCtrl.user.loggedIn">
         <legend>Login</legend>
         <form action="index.xhtml">
