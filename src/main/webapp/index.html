@@ -3,7 +3,8 @@
     <title>Base3</title>
     <!-- StyleSheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="resources/css/base.css"/>
+    <link rel="stylesheet" href="resources/css/layout.css"/>
+    <link rel="stylesheet" href="resources/css/messages.css"/>
 
     <!-- AngularJS files -->
     <script type="application/javascript" src="resources/js/angular.min.js"></script>
@@ -23,10 +24,10 @@
         <form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.checkCredentials()" novalidate>
             <div class="centered_text">
                 <label>Username:</label>
-                <input name="username" ng-model="loginCtrl.credentials.username" placeholder="Username" required/>
+                <input type="text" ng-model="loginCtrl.credentials.username" placeholder="Username" required/>
                 <br/>
                 <label>Password:</label>
-                <input name="password" ng-model="loginCtrl.credentials.password" placeholder="Password" required/>
+                <input type="password" ng-model="loginCtrl.credentials.password" placeholder="Password" required/>
                 <hr/>
                 <button>Login</button>
             </div>
