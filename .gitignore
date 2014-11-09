@@ -9,4 +9,6 @@
 # IntelliJ IDEA files #
 .idea/
 target/
+.factorypath
 base.iml
+
