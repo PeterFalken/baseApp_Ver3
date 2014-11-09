@@ -5,19 +5,23 @@
     var app = angular.module('baseApp', []);
 
     app.controller('LoginController', function () {
+        // Stores user session information.
         this.user = {};
+        // Is the user logged into the system.
         this.loggedIn = false;
+        // Temporary storage of user's credentials before check.
         this.credentials = {};
 
-        this.isLoggedIn = function(){
-            return typeof this.user === 'undefined';
-        }
-
+        // Check user credentials on the backend.
         this.checkCredentials = function () {
             if(this.loggedIn)
                 this.loggedIn = false;
             else
                 this.loggedIn = true;
+
+            // Don't forget to set 'loggedIn'
+            // this.loggedIn = true or false - depending on outcome of check.
+            // Remove user credentials after check
             this.credentials = {};
         }
     });
