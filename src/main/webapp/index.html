@@ -19,14 +19,14 @@
 <!-- Login FORM -->
 <div class="centered login">
     <fieldset ng-show="!loginCtrl.loggedIn">
-        <legend>Login</legend>
+        <legend>Welcome, please login</legend>
         <form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.checkCredentials()" novalidate>
-            <label>username: </label>
-            <input name="username" ng-model="loginCtrl.credentials.username" required/>
-            <br />
-            <label>password: </label>
-            <input name="password" ng-model="loginCtrl.credentials.password" required/>
             <div class="centered_text">
+                <label>Username:</label>
+                <input name="username" ng-model="loginCtrl.credentials.username" placeholder="Username" required/>
+                <br/>
+                <label>Password:</label>
+                <input name="password" ng-model="loginCtrl.credentials.password" placeholder="Password" required/>
                 <hr/>
                 <button>Login</button>
             </div>

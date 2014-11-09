@@ -1,7 +1,7 @@
 body {
     font-family: "Lucida Sans Unicode", Verdana, Arial, sans-serif;
     font-size: 12px;
-    margin: 0px auto;
+    margin: 0 auto;
     /*padding: 10px;*/
 }
 
@@ -12,12 +12,12 @@ p {
 
 .centered {
     /*display: block;*/
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .centered_text {
     /* 	display: block; */
-    margin: 0px auto;
+    margin: 0 auto;
     text-align: center;
 }
 
