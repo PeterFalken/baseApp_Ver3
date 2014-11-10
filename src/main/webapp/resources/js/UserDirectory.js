@@ -16,7 +16,7 @@
                 self.directoryLetters = [];
 
                 $http.get(self.baseURL).success(function(letters){
-                    self.directoryLetters - letters;
+                    self.directoryLetters = letters;
                 });
 
                 self.getUsersForLetter = function(letter){
