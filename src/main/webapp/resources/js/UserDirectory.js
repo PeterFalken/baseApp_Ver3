@@ -9,14 +9,19 @@
             restrict: 'E',
             templateUrl: "resources/directives/user-directory.html",
             controller: function ($http) {
-                // Good practices.
                 var self = this;
+                // Set base URL.
+                self.baseURL = 'rest/Directory/';
                 // Start with an empty array.
                 self.directoryLetters = [];
 
-                $http.get('rest/Directory').success(function (letters) {
+                $http.get(self.baseURL).success(function(letters){
                     self.directoryLetters - letters;
                 });
+
+                self.getUsersForLetter = function(letter){
+                    return $http.get(self.baseURL + letter );
+                };
             },
             controllerAs: 'directoryCtrl'
         };
