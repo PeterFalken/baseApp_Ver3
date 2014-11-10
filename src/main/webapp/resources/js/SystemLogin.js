@@ -1,32 +1,34 @@
 /**
  * Created by luis on 11/9/14.
  */
-(function(){
-    var app = angular.module('SystemLogin',[]);
+(function () {
+    var app = angular.module('SystemLogin', []);
 
-    app.directive("userLogin", function(){
+    app.directive("userLogin", function () {
         return {
             restrict: 'E',
             templateUrl: "resources/directives/user-login.html",
-            controller: function (){
+            controller: function () {
+                // Good practices
+                var self = this;
                 // Stores user session information.
-                this.user = {};
+                self.user = {};
                 // Is the user logged into the system.
-                this.loggedIn = false;
+                self.loggedIn = false;
                 // Temporary storage of user's credentials before check.
-                this.credentials = {};
+                self.credentials = {};
 
                 // Check user credentials on the backend.
-                this.checkCredentials = function () {
-                    if(this.loggedIn)
-                        this.loggedIn = false;
+                self.checkCredentials = function () {
+                    if (self.loggedIn)
+                        self.loggedIn = false;
                     else
-                        this.loggedIn = true;
+                        self.loggedIn = true;
 
                     // Don't forget to set 'loggedIn'
                     // this.loggedIn = true or false - depending on outcome of check.
                     // Remove user credentials after check
-                    this.credentials = {};
+                    self.credentials = {};
                 }
             },
             controllerAs: 'loginCtrl'
