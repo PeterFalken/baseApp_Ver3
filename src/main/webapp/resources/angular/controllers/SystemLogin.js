@@ -7,7 +7,7 @@
     app.directive("userLogin", function () {
         return {
             restrict: 'E',
-            templateUrl: "resources/directives/user-login.html",
+            templateUrl: "resources/angular/directives/user-login.html",
             controller: function () {
                 // Good practices
                 var self = this;
