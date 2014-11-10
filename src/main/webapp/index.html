@@ -2,17 +2,19 @@
 <head>
     <title>Base3</title>
     <!-- StyleSheets -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <!-- Replace BootStrap CSS from local copy with CDN reference -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="resources/css/layout.css"/>
     <link rel="stylesheet" href="resources/css/messages.css"/>
 
     <!-- AngularJS files -->
+    <!-- Replace AngularJS from local copy with CDN reference -->
     <script type="application/javascript" src="resources/js/angular.min.js"></script>
     <script type="application/javascript" src="resources/js/ngApp_base.js"></script>
+    <script type="application/javascript" src="resources/js/SystemLogin.js"></script>
 </head>
 
-<body ng-controller="LoginController as loginCtrl">
-
+<body>
 <!-- HEADER Section: START -->
 <div class="header centered_text">
     <div class="container">
@@ -22,24 +24,10 @@
 <!-- HEADER Section: END -->
 
 <!-- Login FORM -->
-<div class="centered login">
-    <fieldset ng-show="!loginCtrl.loggedIn">
-        <legend>Welcome, please login</legend>
-        <form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.checkCredentials()" novalidate>
-            <div class="centered_text">
-                <label>Username:</label>
-                <input type="text" ng-model="loginCtrl.credentials.username" placeholder="Username" required/>
-                <br/>
-                <label>Password:</label>
-                <input type="password" ng-model="loginCtrl.credentials.password" placeholder="Password" required/>
-                <hr/>
-                <button>Login</button>
-            </div>
-        </form>
-    </fieldset>
-</div>
+<user-login></user-login>
 
 <!-- Work AREA -->
+<!--
 <div class="centered" style="width: 800px">
     <fieldset ng-show="loginCtrl.loggedIn">
         <legend>Application</legend>
@@ -56,6 +44,7 @@
         </form>
     </fieldset>
 </div>
+-->
 
 <!-- FOOTER Section: START -->
 <div class="footer centered_text">

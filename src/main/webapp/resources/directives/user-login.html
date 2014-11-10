@@ -1,0 +1,18 @@
+<!-- DIRECTIVE - START: UserLogin -->
+<div class="centered login">
+    <fieldset ng-show="!loginCtrl.loggedIn">
+        <legend>Welcome, please login</legend>
+        <form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.checkCredentials()" novalidate>
+            <div class="centered_text">
+                <label>Username:</label>
+                <input type="text" ng-model="loginCtrl.credentials.username" placeholder="Username" required/>
+                <br/>
+                <label>Password:</label>
+                <input type="password" ng-model="loginCtrl.credentials.password" placeholder="Password" required/>
+                <hr/>
+                <button>Login</button>
+            </div>
+        </form>
+    </fieldset>
+</div>
+<!-- DIRECTIVE - END: UserLogin -->

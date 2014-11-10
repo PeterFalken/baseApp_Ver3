@@ -2,29 +2,9 @@
  * Created by luis on 11/8/14.
  */
 (function () {
-    var app = angular.module('baseApp', []);
-
-    app.controller('LoginController', function () {
-        // Stores user session information.
-        this.user = {};
-        // Is the user logged into the system.
-        this.loggedIn = false;
-        // Temporary storage of user's credentials before check.
-        this.credentials = {};
-
-        // Check user credentials on the backend.
-        this.checkCredentials = function () {
-            if(this.loggedIn)
-                this.loggedIn = false;
-            else
-                this.loggedIn = true;
-
-            // Don't forget to set 'loggedIn'
-            // this.loggedIn = true or false - depending on outcome of check.
-            // Remove user credentials after check
-            this.credentials = {};
-        }
-    });
+    var app = angular.module('baseApp', ['SystemLogin']);
+    // var userSession = {};
+    // var loggedIn = false;
 
     app.controller('AppUserDirectoryController', function () {
         this.directoryLetters = ['A','B','C'];
@@ -36,4 +16,5 @@
             }
         };
     });
+
 })();
