@@ -29,23 +29,27 @@
 <!-- Login FORM -->
 <user-login ng-hide="mainCtrl.isLoggedIn()"></user-login>
 
-<!-- Work AREA -->
-<div class="centered" style="width: 800px">
-    <fieldset ng-show="mainCtrl.isLoggedIn()">
-        <legend>Application</legend>
-        <form name="workForm" ng-submit="mainCtrl.logout()">
-            <label>Do username:</label>
-            <br/>
-            <label>Do password:</label>
-            <br/>
+<!-- Work AREA: START -->
+<div class="main" ng-show="mainCtrl.isLoggedIn()">
+    <div class="centered" style="width: 800px">
+        <fieldset>
+            <legend>Application</legend>
+            <form name="workForm" ng-submit="mainCtrl.logout()">
+                <label>Do username:</label>
+                <br/>
+                <label>Do password:</label>
+                <br/>
 
-            <div class="centered_text">
-                <hr/>
-                <button>Login</button>
-            </div>
-        </form>
-    </fieldset>
+                <div class="centered_text">
+                    <hr/>
+                    <button>Login</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
 </div>
+<!-- Work AREA: END -->
+
 
 <!-- FOOTER Section: START -->
 <div class="footer centered_text">

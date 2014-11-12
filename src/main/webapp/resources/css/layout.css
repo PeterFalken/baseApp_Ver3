@@ -1,7 +1,6 @@
 body {
     font-family: "Lucida Sans Unicode", Verdana, Arial, sans-serif;
     font-size: 12px;
-    margin: 40px auto;
 }
 
 p {
@@ -35,6 +34,11 @@ p {
     height: 30px;
     line-height: 30px;
     background-color: #f5f5f5;
+}
+
+/* Main Container for application */
+.main {
+    margin: 40px auto;
 }
 
 /* Using example from: http://getbootstrap.com/examples/sticky-footer/ */
