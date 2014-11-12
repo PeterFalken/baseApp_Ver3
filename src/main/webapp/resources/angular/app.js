@@ -2,27 +2,19 @@
  * Created by luis on 11/8/14.
  */
 (function () {
-    var app = angular.module('baseApp', ['SystemLogin','UserDirectory']);
-    // var userSession = {};
-    // var loggedIn = false;
+    var app = angular.module('baseApp', ['SystemLogin','SessionModule']);
 
-    /*
-    app.controller('AppUserDirectoryController', ['$http', function ($http) {
+    app.controller('MainController', ['SessionService', function (s_svc) {
         // Good practices.
         var self = this;
-        // Set base URL.
-        self.baseURL = 'rest/Directory/';
-        // Start with an empty array.
-        self.directoryLetters = [];
 
-        $http.get(self.baseURL).success(function(letters){
-            self.directoryLetters - letters;
-        });
-
-        self.getUsersForLetter = function(letter){
-            return $http.get(self.baseURL + letter );
+        self.isLoggedIn = function(){
+            return s_svc.isLoggedIn;
         };
 
+        self.logout = function() {
+          s_svc.logout();
+        };
     }]);
-    */
+
 })();

@@ -9,15 +9,17 @@
 
     <!-- AngularJS files -->
     <!-- Replace AngularJS from local copy with CDN reference -->
-    <script type="application/javascript" src="resources/js/angular.min.js"></script>
+    <script type="application/javascript" src="resources/js/angular.js"></script>
     <script type="application/javascript" src="resources/angular/app.js"></script>
+    <script type="application/javascript" src="resources/angular/services/ApplicationSession.js"></script>
+    <script type="application/javascript" src="resources/angular/services/UserAuthentication.js"></script>
     <script type="application/javascript" src="resources/angular/controllers/SystemLogin.js"></script>
     <script type="application/javascript" src="resources/angular/controllers/UserDirectory.js"></script>
 </head>
 
-<body>
+<body ng-controller="MainController as mainCtrl">
 <!-- HEADER Section: START -->
-<div class="header centered_text">
+<div class="header centered_text" ng-show="mainCtrl.isLoggedIn()">
     <div class="container">
         <p>bitjester.com - 2014</p>
     </div>
@@ -25,17 +27,16 @@
 <!-- HEADER Section: END -->
 
 <!-- Login FORM -->
-<user-login></user-login>
+<user-login ng-hide="mainCtrl.isLoggedIn()"></user-login>
 
 <!-- Work AREA -->
-<!--
 <div class="centered" style="width: 800px">
-    <fieldset ng-show="loginCtrl.loggedIn">
+    <fieldset ng-show="mainCtrl.isLoggedIn()">
         <legend>Application</legend>
-        <form name="workForm" ng-submit="loginCtrl.checkCredentials()">
-            <label>Do username: {{loginCtrl.user.username}}</label>
+        <form name="workForm" ng-submit="mainCtrl.logout()">
+            <label>Do username:</label>
             <br/>
-            <label>Do password: {{loginCtrl.user.password}}</label>
+            <label>Do password:</label>
             <br/>
 
             <div class="centered_text">
@@ -45,7 +46,6 @@
         </form>
     </fieldset>
 </div>
--->
 
 <!-- FOOTER Section: START -->
 <div class="footer centered_text">
