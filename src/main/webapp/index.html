@@ -31,21 +31,27 @@
 
 <!-- Work AREA: START -->
 <div class="main" ng-show="mainCtrl.isLoggedIn()">
-    <div class="centered" style="width: 800px">
-        <fieldset>
-            <legend>Application</legend>
-            <form name="workForm" ng-submit="mainCtrl.logout()">
-                <label>Do username:</label>
-                <br/>
-                <label>Do password:</label>
-                <br/>
+    <div class="container">
 
-                <div class="centered_text">
-                    <hr/>
-                    <button>Login</button>
-                </div>
-            </form>
-        </fieldset>
+        <!-- MockUp: START -->
+        <div class="centered" style="width: 800px">
+            <fieldset>
+                <legend>Application</legend>
+                <form name="workForm" ng-submit="mainCtrl.logout()">
+                    <label>Do username:</label>
+                    <br/>
+                    <label>Do password:</label>
+                    <br/>
+
+                    <div class="centered_text">
+                        <hr/>
+                        <button>Login</button>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+        <!-- MockUp: END -->
+
     </div>
 </div>
 <!-- Work AREA: END -->
